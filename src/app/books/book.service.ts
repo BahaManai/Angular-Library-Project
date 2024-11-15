@@ -6,7 +6,7 @@ import { Book } from './book';
 })
 export class BookService {
   books = [
-    new Book(1, "Power of habits", "...",  35),
+    new Book(1, "Power of habits", "Jonathan Joestar",  35),
     new Book( 2,  "The Slight age",  "Jeff Olsen", 40),
     new Book( 3,  "Atomic Habits 3",  "James Clear",  50)
   ];
