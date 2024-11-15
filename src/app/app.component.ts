@@ -10,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular-Library';
+  logo = "https://cdn-icons-png.flaticon.com/512/2784/2784539.png";
 }
