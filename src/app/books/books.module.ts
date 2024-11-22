@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksListComponent } from './books-list/books-list.component';
@@ -15,7 +16,8 @@ import { BooksEditComponent } from './books-edit/books-edit.component';
   ],
   imports: [
     CommonModule,
-    BooksRoutingModule
+    BooksRoutingModule,
+    FormsModule
   ]
 })
 export class BooksModule { }
