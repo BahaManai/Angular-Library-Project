@@ -10,7 +10,19 @@ import { Book } from '../book';
 export class BooksListComponent implements OnInit{
   books? :Book[];
   constructor(private bookService: BookService){}
+  
+  deleteBook(id : number){
+    if(confirm("Êtes-vous sûre de vouloir supprimer ce livre?")){
+      this.bookService.deleteBook(id);
+    //Methode 2 this.books = this.bookService.getBooks();
+    }
+  }
+
+  //subscribe rxjs
   ngOnInit(): void {
     this.books = this.bookService.getBooks();
+    this.bookService.booksEdited.subscribe(
+      newBooks => this.books = newBooks
+  )
   }
 }

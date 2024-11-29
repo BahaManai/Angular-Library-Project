@@ -19,7 +19,8 @@
         <td>{{book.author}}</td>
         <td>{{book.price}}</td>
         <td><a class="btn btn-primary" [routerLink]="['/books','edit',book.id]">Editer</a></td>
-        <td><button class="btn btn-danger" >Supprimer</button></td>
+        <td><button class="btn btn-danger" (click)="deleteBook(book.id)">Supprimer</button></td>
       </tr>
       }
     </tbody></table>
+    <app-books-stats></app-books-stats>
