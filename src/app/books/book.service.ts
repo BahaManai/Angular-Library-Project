@@ -26,4 +26,11 @@ export class BookService {
   getBookById(id: number) : Book | undefined{
     return this.books.find(book => book.id === id)
   }
+
+  updateBook(updatedBook: Book): void {
+    this.books = this.books.map(currentBook =>
+      currentBook.id === updatedBook.id ? updatedBook : currentBook
+    );
+  }
+  
 }
