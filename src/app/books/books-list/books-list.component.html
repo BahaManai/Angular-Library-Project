@@ -18,7 +18,7 @@
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.price}}</td>
-        <td><button class="btn btn-primary" routerLink="/books/edit">Editer</button></td>
+        <td><a class="btn btn-primary" [routerLink]="['/books','edit',book.id]">Editer</a></td>
         <td><button class="btn btn-danger" >Supprimer</button></td>
       </tr>
       }

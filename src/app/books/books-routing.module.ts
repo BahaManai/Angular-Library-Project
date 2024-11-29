@@ -7,7 +7,7 @@ import { BooksEditComponent } from './books-edit/books-edit.component';
 const routes: Routes = [
   {path:"", component: BooksListComponent},
   {path:"add", component: BooksAddComponent},
-  {path:"edit", component: BooksEditComponent}
+  {path:"edit/:id", component: BooksEditComponent}
 ];
 
 @NgModule({
