@@ -10,7 +10,9 @@ export class BooksStatsComponent implements OnInit {
   books? : Book[];
   constructor(private bookService : BookService){}
   ngOnInit(): void {
-    this.books = this.bookService.getBooks();
+    this.bookService.getBooks().subscribe(
+      books => this.books = books
+    )
     this.bookService.booksEdited.subscribe(
       newBooks => this.books = newBooks
     )

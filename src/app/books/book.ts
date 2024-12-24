@@ -18,10 +18,10 @@ export class Book {
     public set title(value: string) {
         this._title = value;
     }
-    public get id(): number {
+    public get id(): string {
         return this._id;
     }
-    public set id(value: number) {
+    public set id(value: string) {
         this._id = value;
     }
     /*
@@ -72,7 +72,7 @@ export class Book {
 }
 */
 // raccourci
-constructor (private _id: number,private _title: string,
+constructor (private _id: string,private _title: string,
     private _author: string,
     private _price: number){}
 }

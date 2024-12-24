@@ -13,8 +13,11 @@ export class BooksAddComponent {
               private router : Router){}
   
   addBook(f: NgForm){
-    this.bookService.addBook(f.value.title, f.value.author, +f.value.price);
+    /* this.bookService.addBook(f.value.title, f.value.author, +f.value.price);
     this.router.navigate(['/books']);
-    console.log(f);
+    console.log(f); */
+    this.bookService.addBook(f.value.title, f.value.author, +f.value.price).subscribe(
+      book => this.router.navigate(['/books'])
+    );
   }
 }
